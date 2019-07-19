@@ -19,7 +19,8 @@ export const appRouter = [{
                         disabledSourceDropdown: false,
                     },
                     component: () => import('@/components/main/general-info/generalInfo.vue'),
-                }, {
+                }, 
+                {
                     path: 'account-list',
                     icon: '',
                     name: 'account-list',

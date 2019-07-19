@@ -1,6 +1,5 @@
 <template>
     <div class="hello">
-        <mt-range v-model="rangeValue"></mt-range>
         <div class='row_one'>dddddddddddddd</div>
         <div class='row_two'></div>
         <div class='row_three'></div>
@@ -8,13 +7,12 @@
 </template>
 <script>
 export default {
-    name: 'HelloWorld',
+    name: 'AccountDetail',
     props: {
         msg: String
     },
     data() {
         return {
-            rangeValue: 30
         }
     }
 }
