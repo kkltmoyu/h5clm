@@ -10,8 +10,17 @@
     </div>
 </template>
 <script>
+import Vue from 'vue'
 import Cookies from "js-cookie";
 import constants from "@/assets/js/constants";
+import { Toast,Field,Button } from 'mint-ui';
+import {
+    mapState,
+    mapMutations,
+} from 'vuex'
+
+Vue.component(Field.name, Field);
+Vue.component(Button.name, Button);
 
 export default {
     name: "login",
@@ -24,7 +33,10 @@ export default {
             }
         };
     },
-    method: {
+    methods: {
+        ...mapMutations({
+            setCurrentSource:'setCurrentSource',
+        }),
         check(username, password) {
             if (!username) {
                 return false;

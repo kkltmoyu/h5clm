@@ -4,12 +4,12 @@ import Cookies from 'js-cookie';
 import {
   appRouter
 } from './routerConfig';
-console.log('appRouter is ', appRouter)
+
 Vue.use(Router);
 
 // 路由配置
 const RouterConfig = {
-	// mode: 'history',
+	mode: 'history',
 	routes: appRouter
 };
 
@@ -22,7 +22,7 @@ router.beforeEach((to, from, next) => {
     });
 
   } else {
-      debugger
+    next();
   }
 });
 

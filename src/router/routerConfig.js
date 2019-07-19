@@ -3,36 +3,42 @@ export const appRouter = [{
             path: '/login',
             name: 'login',
             meta: {
-                title: 'Login - 登录'
+                title: 'Login'
             },
             component: () => import('@/views/login/login.vue')
         } ,{
-            path: 'general-info',
-            icon: '',
-            name: 'general-info',
-            title: '平台概览',
-            meta: {
-                disabledSourceDropdown: false,
-            },
-            component: () => import('@/components/main/general-info/generalInfo.vue'),
-        }, {
-            path: 'account-list',
-            icon: '',
-            name: 'account-list',
-            title: '账户列表',
-            meta: {
-                disabledSourceDropdown: false,
-            },
-            component: () => import('@/components/main/account-list/accountList.vue'),
-        },
-        {
-            path: 'account-detail',
-            title: '账户详情',
-            name: 'account_detail',
-            component: () => import('@/components/main/account-detail/accountDetail.vue'),
-            meta: {
-                disabledSourceDropdown: true,
-            }
+            path:'/main',
+            name:'main',
+            component: () => import('@/views/main/main.vue'),
+            children: [{
+                    path: 'general-info',
+                    icon: '',
+                    name: 'general-info',
+                    title: '平台概览',
+                    meta: {
+                        disabledSourceDropdown: false,
+                    },
+                    component: () => import('@/components/main/general-info/generalInfo.vue'),
+                }, {
+                    path: 'account-list',
+                    icon: '',
+                    name: 'account-list',
+                    title: '账户列表',
+                    meta: {
+                        disabledSourceDropdown: false,
+                    },
+                    component: () => import('@/components/main/account-list/accountList.vue'),
+                },
+                {
+                    path: 'account-detail',
+                    title: '账户详情',
+                    name: 'account_detail',
+                    component: () => import('@/components/main/account-detail/accountDetail.vue'),
+                    meta: {
+                        disabledSourceDropdown: true,
+                    }
+                }
+            ]
         }, {
             path: '/*',
             redirect: {
