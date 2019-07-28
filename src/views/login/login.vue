@@ -7,6 +7,18 @@
         <div class="submit_wrapper">
             <mt-button class="submit" type="default" @click="submitData">submit</mt-button>
         </div>
+        <div class="div1">
+            
+        </div>
+        <div class="div2">
+            
+        </div>
+        <div class="div3">
+            
+        </div>
+        <div class="div4">
+            
+        </div>
     </div>
 </template>
 <script>
@@ -120,4 +132,28 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.login_wrapper{
+    .div1{
+        width:100%;
+        height:2rem;
+        background: red;
+    }
+    .div2{
+        width:100%;
+        height:3rem;
+        background: yellow;
+    }
+    .div3{
+        width:100%;
+        height:5rem;
+        background: blue;
+    }
+    .div4{
+        position:fixed;
+        bottom:0;
+        width:100%;
+        height:2rem;
+        background: green;
+    }
+}
 </style>

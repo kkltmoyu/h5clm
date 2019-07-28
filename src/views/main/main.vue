@@ -26,6 +26,7 @@ export default {
     height:100%;
 
     .content {
+        overflow-y:auto;
         width: 100%;
         height: calc(100% - 100px);
     }
