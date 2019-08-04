@@ -10,7 +10,7 @@
 import Footer from '@/views/footer/footer'
 
 export default {
-    name: 'main',
+    name: 'Main',
     components:{
         Footer
     },

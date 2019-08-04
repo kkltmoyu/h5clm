@@ -1,18 +1,50 @@
 <template>
     <div class="hello">
-        <div class='row_one'>LLLLLLLLLLL</div>
-        <div class='row_two'></div>
-        <div class='row_three'></div>
+        <img src="https://jic.talkingdata.com/lbs/smartselect/business-management/login-normal.svg"></img>
+        <mt-loadmore :top-method="loadTop"  ref="loadmore">
+            <ul>
+                <li v-for="item in list" :key='item'>{{ item }}</li>
+            </ul>
+        </mt-loadmore>
     </div>
 </template>
 <script>
+import Vue from 'vue'
+import { Loadmore } from 'mint-ui';
+
+Vue.component(Loadmore.name, Loadmore);
 export default {
     name: 'AccountList',
     props: {
-        msg: String
+        msg: String,
     },
     data() {
         return {
+            list:[],
+            no:11,
+        }
+    },
+    mounted(){
+        this.init();
+    },
+    methods:{
+        init(){
+            this.initData();
+        },
+        initData(){
+            let arr = []
+            for(let i = 0 ; i < 10;i++)
+                arr.push(i);
+            this.list = arr;
+        },
+        loadTop(){
+            let arr = []
+            for(let i = this.no;i < this.no + 10; i ++){
+                arr.push(i);
+            }
+            this.no += 10;
+            this.list.unshift(...arr);
+            this.$refs.loadmore.onTopLoaded();
         }
     }
 }
@@ -22,6 +54,12 @@ export default {
 .hello {
     display: flex;
     flex-direction: column;
+    font-size:0.25rem;
+
+    img{
+        width:400px;
+        height:400px;
+    }
     .row_one {
         width: 100%;
         height: 100px;

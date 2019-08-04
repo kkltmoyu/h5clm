@@ -8,7 +8,7 @@ class Utils {
     static ajaxUrl(native) {
         if (native) {
             return this.env === 'development' ?
-                'https://debug.talkingdata.com/lbs/smartselect/api/statistics' :
+                'https://api.talkingdata.com/lbs/smartselect/statistics' :
                 this.env === 'production'
                 //production环境
                 ?
