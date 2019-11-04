@@ -1,8 +1,9 @@
 <template>
     <div class="footer_wrapper">
-        <a href='javascipt:void(0)' @click='pageTo("take")'>wai</a>
-        <a href='javascipt:void(0)' @click='pageTo("orders")'>or</a>
-        <a href='javascipt:void(0)' @click='pageTo("info")'>in</a>
+        <a href='javascipt:void(0)' @click='pageTo(item.name)' v-for='item in list' :key='item.title'>
+            <i :class="['iconfont ' + item.icon ]"></i>
+            <span>{{item.title}}</span>
+        </a>
     </div>
 </template>
 <script>
@@ -16,6 +17,19 @@ export default {
     },
     data() {
         return {
+            list:[{
+                name:'take',
+                icon:'iconwaimai',
+                title:'wai'
+            },{
+                name:'orders',
+                icon:'iconfeed',
+                title:'orders'
+            },{
+                name:'info',
+                icon:'iconaccount',
+                title:'user'
+            }],
             routeMap:{
                 take:'take-away',
                 order:'orders',
@@ -50,7 +64,9 @@ export default {
         text-decoration: none;
         font-size:0.25rem;
         flex:1;
-        line-height: 100px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
     }
     a:not(:first-child){
         border-left:1px solid #ebebeb;
