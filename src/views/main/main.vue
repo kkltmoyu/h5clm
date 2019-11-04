@@ -1,7 +1,9 @@
 <template>
     <div class="main_wrapper">
         <div class="content">
-            <router-view/>
+            <keep-alive>
+                <router-view/>
+            </keep-alive>
         </div>
         <Footer></Footer>
     </div>
@@ -10,7 +12,6 @@
 import Footer from '@/views/footer/footer'
 
 export default {
-    name: 'Main',
     components:{
         Footer
     },

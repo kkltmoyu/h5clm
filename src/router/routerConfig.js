@@ -10,33 +10,31 @@ export const appRouter = [{
             path:'/main',
             name:'main',
             component: () => import('@/views/main/main.vue'),
+            redirect: 'main/take-away',
             children: [{
-                    path: 'general-info',
-                    icon: '',
-                    name: 'general-info',
-                    title: '平台概览',
+                    path: 'take-away',
+                    name: 'take-away',
+                    title: '外卖',
                     meta: {
-                        disabledSourceDropdown: false,
+                        
                     },
-                    component: () => import('@/components/main/general-info/generalInfo.vue'),
+                    component: () => import('@/views/main/take-away/take-away.vue'),
                 }, 
                 {
-                    path: 'account-list',
-                    icon: '',
-                    name: 'account-list',
-                    title: '账户列表',
+                    path: 'orders',
+                    name: 'orders',
+                    title: '订单',
                     meta: {
-                        disabledSourceDropdown: false,
+                       
                     },
-                    component: () => import('@/components/main/account-list/accountList.vue'),
+                    component: () => import('@/views/main/orders/orders.vue'),
                 },
                 {
-                    path: 'account-detail',
-                    title: '账户详情',
-                    name: 'account_detail',
-                    component: () => import('@/components/main/account-detail/accountDetail.vue'),
+                    path: 'user-info',
+                    title: '我的',
+                    name: 'user-info',
+                    component: () => import('@/views/main/user-info/user-info.vue'),
                     meta: {
-                        disabledSourceDropdown: true,
                     }
                 }
             ]

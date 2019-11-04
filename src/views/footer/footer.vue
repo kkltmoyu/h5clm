@@ -1,8 +1,8 @@
 <template>
     <div class="footer_wrapper">
-        <a href='javascipt:void(0)' @click='toGen'>gen</a>
-        <a href='javascipt:void(0)' @click='toUser'>toUser</a>
-        <a href='javascipt:void(0)' @click='toDetail'>toDetail</a>
+        <a href='javascipt:void(0)' @click='pageTo("take")'>wai</a>
+        <a href='javascipt:void(0)' @click='pageTo("orders")'>or</a>
+        <a href='javascipt:void(0)' @click='pageTo("info")'>in</a>
     </div>
 </template>
 <script>
@@ -11,28 +11,23 @@ import { Button } from 'mint-ui';
 Vue.component(Button.name, Button);
 
 export default {
-    name: 'Footer',
     props: {
         msg: String
     },
     data() {
         return {
-
+            routeMap:{
+                take:'take-away',
+                order:'orders',
+                info:'user-info'
+            }
         }
     },
     methods: {
-        toGen(){
-            console.log('click toGen')
-            this.$router.push('general-info');
+        pageTo(name){
+            this.$router.push(routeMap[name]);
         },
-        toUser(){
-            console.log('click toUser')
-            this.$router.push('account-list');
-        },
-        toDetail(){
-            console.log('click toDetail')
-            this.$router.push('account-detail');
-        },
+       
     }
 }
 </script>
@@ -48,6 +43,7 @@ export default {
     display:flex;
     align-items: center;
     justify-content: space-around;
+    border-top:1px solid black;
 
     a{
         color:#ebebeb;
