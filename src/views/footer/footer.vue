@@ -53,7 +53,7 @@ export default {
     display:flex;
     align-items: center;
     justify-content: space-around;
-    border-top:1px solid black;
+    border-top:f-cal-border-width(1) solid black;
 
     a{
         color:#ebebeb;

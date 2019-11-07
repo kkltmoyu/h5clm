@@ -1,0 +1,3 @@
+@function f-cal-border-width($width) {
+    @return #{$width/$deviceRatio}px;
+}
