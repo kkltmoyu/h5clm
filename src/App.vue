@@ -11,6 +11,19 @@ export default {
     name: 'app',
     components:{
     },
+    created(){
+        this.initScale();
+    },
+    methods:{
+        initScale(){
+            let dpr = window.devicePixelRatio || 1;
+            let viep = document.querySelector('meta[name=viewport]');
+            let scal = 1 / dpr;
+            // document.documentElement.style.fontSize = (document.documentElement.offsetWidth/10)*dpr+'px';
+            viep.setAttribute('content','width=device-width,initial-scale='+scal+',maximum-scale='+scal+',user-scalable=no');
+            console.log('done:',dpr)
+        }
+    },
     data() {
         return {
         }

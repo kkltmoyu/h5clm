@@ -7,10 +7,6 @@
     </div>
 </template>
 <script>
-import Vue from 'vue'
-import { Button } from 'mint-ui';
-Vue.component(Button.name, Button);
-
 export default {
     props: {
         msg: String
@@ -23,7 +19,7 @@ export default {
                 title:'wai'
             },{
                 name:'orders',
-                icon:'iconfeed',
+                icon:'iconfeeds',
                 title:'orders'
             },{
                 name:'info',
