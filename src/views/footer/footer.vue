@@ -19,23 +19,25 @@ export default {
                 title:'wai'
             },{
                 name:'orders',
-                icon:'iconfeeds',
+                icon:'iconorder',
                 title:'orders'
             },{
                 name:'info',
-                icon:'iconaccount',
+                icon:'iconusercenter',
                 title:'user'
             }],
             routeMap:{
                 take:'take-away',
-                order:'orders',
+                orders:'orders',
                 info:'user-info'
             }
         }
     },
     methods: {
         pageTo(name){
-            this.$router.push(routeMap[name]);
+            this.$router.push({
+                name:this.routeMap[name]
+            });
         },
        
     }
@@ -49,20 +51,29 @@ export default {
     left: 0;
     right: 0;
     width: 100%;
-    height: 100px;
+    height: 60px;
     display:flex;
     align-items: center;
     justify-content: space-around;
-    border-top:f-cal-border-width(1) solid black;
+    border-top:f-cal-border-width(2) solid #ebebeb;
 
     a{
         color:#ebebeb;
         text-decoration: none;
         font-size:0.25rem;
+        height:100%;
         flex:1;
         display:flex;
         flex-direction: column;
         justify-content: center;
+
+        i{
+            font-size:0.5rem;
+        }
+
+        span{
+            font-size:0.25rem;
+        }
     }
     a:not(:first-child){
         border-left:1px solid #ebebeb;
