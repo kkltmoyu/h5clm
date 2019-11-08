@@ -26,7 +26,7 @@ export default {
 .locate_wrapper {
     width:100%;
     font-size:0.5rem;
-
+    height:40px;
     // .mint-searchbar{
     //     background:#fff;
     // }

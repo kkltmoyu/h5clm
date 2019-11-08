@@ -3,8 +3,6 @@
 		<Locate :data='locate'></Locate>
 		<SearchAll></SearchAll>
 		<Activity></Activity> 
-    	<!-- <span>take-away</span> -->
-        <mt-button size="small">small</mt-button>
     </div>
 </template>
 <script>

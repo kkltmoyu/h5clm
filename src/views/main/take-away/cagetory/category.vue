@@ -1,9 +1,9 @@
 <template>
-    <div class="activity_wrapper">
-	    <mt-swipe @change="handleChange">
-			<mt-swipe-item v-for='item in list'>
-			 	<img :alt='item.name' :src='item.src'/>
-			</mt-swipe-item>
+    <div class="category_wrapper">
+       <mt-swipe @change="handleChange">
+		  <mt-swipe-item v-for='item in list'>
+		  	<img :alt='item.name' :src='item.src'/>
+		  </mt-swipe-item>
 		</mt-swipe>
     </div>
 </template>
@@ -39,9 +39,7 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.activity_wrapper {
-	position:absolute;
-	top:100px;
+.category_wrapper {
     width:100%;
     font-size:0.5rem;
     height:200px;
