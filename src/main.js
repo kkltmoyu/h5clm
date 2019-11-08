@@ -8,8 +8,10 @@ import util from './assets/js/utils';
 import axios from 'axios';
 import echarts from 'echarts/lib/echarts'
 import resource from './assets/js/resources'
+import Mint from 'mint-ui';
 
-Vue.config.productionTip = false
+Vue.use(Mint);
+Vue.config.productionTip = false;
 
 Vue.prototype.$axios = axios;
 Vue.prototype.$utils = util;

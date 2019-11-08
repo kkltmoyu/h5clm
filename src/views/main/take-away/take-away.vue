@@ -1,6 +1,7 @@
 <template>
     <div class="take_away_wrapper">
         take-away
+        <mt-button size="small">small</mt-button>
     </div>
 </template>
 <script>

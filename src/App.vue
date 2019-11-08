@@ -12,18 +12,9 @@ export default {
     components:{
     },
     created(){
-        // this.initScale();
     },
     methods:{
-        initScale(){
-            let dpr = window.devicePixelRatio || 1;
-            let viep = document.querySelector('meta[name=viewport]');
-            let scal = 1 / dpr;
-            console.log('dpr is ',window.devicePixelRatio,',scal is ',scal,',offsetWidth is ',document.documentElement.offsetWidth)
-            document.documentElement.style.fontSize = (document.documentElement.offsetWidth/10)*dpr+'px';
-            viep.setAttribute('content','width=device-width,initial-scale='+scal+',maximum-scale='+scal+',user-scalable=no');
-            
-        }
+        
     },
     data() {
         return {
