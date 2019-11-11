@@ -2,7 +2,8 @@
     <div class="shop_list_wrapper">
         <div>推荐商家</div>
         <div class='filter'>
-
+            <div class='l'></div>
+            <div class='r'></div>
         </div>
         <div class='shop_list'>
             <Shop v-for='item in shopData' :data='item' :key='item.id'></Shop>
@@ -38,8 +39,19 @@ export default {
 .shop_list_wrapper {
     width:100%;
     font-size:0.5rem;
-    height:250px;
-
     
+    .filter{
+        display:flex;
+        justify-content: space-between;
+
+        .l{
+            display:flex;
+        }
+    }
+
+    .shop_list{
+        width:100%;
+        overflow-y:auto;
+    }
 }
 </style>

@@ -1,7 +1,9 @@
 export const shopsData = [{
+    id:1,
     name:'name1',
     icon:'icon',
     rating: 4.9,
+    sale_count:166,
     float_delivery_fee:3.5,
     send_line:0,
     distance:3000,
@@ -17,6 +19,7 @@ export const shopsData = [{
         name: '阳关餐厅',
     }]
 }, {
+    id:2,
     name: 'name1',
     icon: 'icon',
     rating: 4.8,
@@ -35,6 +38,7 @@ export const shopsData = [{
         name: '阳关餐厅',
     }]
 },{
+    id:3,
     name: 'name1',
     icon: 'icon',
     rating: 4.9,
@@ -53,6 +57,7 @@ export const shopsData = [{
         name: '阳关餐厅',
     }]
 },{
+    id:4,
     name: 'name1',
     icon: 'icon',
     rating: 4.5,

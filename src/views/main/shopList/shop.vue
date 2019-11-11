@@ -1,15 +1,18 @@
 <template>
     <div class="shop_wrapper">
        <div class='img_wrapper'>
-           <img :src='data.src' alt=''/>
+           <img :src='data.icon' :alt='data.name'/>
        </div>
        <div class='info_wrapper'>
            <div class='title'>{{data.name}}</div>
            <div class='row'>
+               <i class='star iconfont'></i>
+               <span class='rate'>{{data.rating}}</span>
+               <span class='sale'>月售{{data.sale_count}}</span>
            </div>
            <div class='row'>
                <div class='l'>
-                    <span class='send_line'>{{data.send_line}}起送</span>
+                    <span class='send_line'>￥{{data.send_line}}起送</span>
                     <span class='delivery_fee'>{{data.float_delivery_fee}}</span>
                </div>
                <div class='r'>
@@ -50,5 +53,23 @@ export default {
 .shop_wrapper {
     width:100%;
     font-size:0.5rem;
+    display:flex;
+
+    .img_wrapper{
+
+        img{
+            width:100px;
+            height:100px;
+        }
+    }
+
+    .info_wrapper{
+        flex:1;
+        border-bottom:f-cal-border-width(1) solid #ebebeb;
+
+        .title{
+
+        }
+    }
 }
 </style>
