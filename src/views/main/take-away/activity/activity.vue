@@ -1,7 +1,7 @@
 <template>
     <div class="activity_wrapper">
 	    <mt-swipe @change="handleChange">
-			<mt-swipe-item v-for='item in list'>
+			<mt-swipe-item v-for='item in list' :key='item.name'> 
 			 	<img :alt='item.name' :src='item.src'/>
 			</mt-swipe-item>
 		</mt-swipe>
@@ -33,7 +33,6 @@ export default {
         handleChange(){
             console.log('handleChange')
         }
-       
     }
 }
 </script>

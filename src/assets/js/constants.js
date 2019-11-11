@@ -1,4 +1,5 @@
 export const staticUrl = 'assets/img/activity/';
+export const categoryUrl = 'assets/img/category/'
 
 export const categoryList = [{
     title:'美食',
@@ -110,11 +111,6 @@ export const categoryList = [{
     title:'晚餐',
     key:'晚餐',
     icon:'wancan',
-    children:[]
-},{
-    title:'夜宵',
-    key:'夜宵',
-    icon:'yexiao',
     children:[]
 }]
 
