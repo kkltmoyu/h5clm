@@ -3,11 +3,11 @@ export const staticUrl = 'assets/img/activity/';
 export const categoryList = [{
     title:'美食',
     key:'美食',
-    icon:'',
+    icon: 'meishi',
     children:[{
         title:'全部',
         key:'全部',
-        icon:'',
+        icon:'quanbu',
     },{
         title:'简餐便当',
         key:'简餐便当',
@@ -15,19 +15,19 @@ export const categoryList = [{
     },{
         title:'地方菜系',
         key:'地方菜系',
-        icon:'jiancanbiandang',
+        icon:'difangcaixi',
     },{
         title:'小吃炸串',
         key:'小吃炸串',
-        icon:'',
+        icon:'xiaochizhachuan',
     },{
         title:'面食粥点',
         key:'面食粥点',
-        icon:'',
+        icon:'mianshizhoudian',
     },{
         title:'日韩料理',
         key:'日韩料理',
-        icon:'',
+        icon:'rihanliaoli',
     },{
         title:'轻食西餐',
         key:'轻食西餐',
@@ -35,31 +35,31 @@ export const categoryList = [{
     },{
         title:'汉堡披萨',
         key:'汉堡披萨',
-        icon:'',
+        icon:'hanbaopisa',
     },{
         title:'香锅冒菜',
         key:'香锅冒菜',
-        icon:'',
+        icon:'xiangguomaocai',
     }]
 },{
     title:'快捷便当',
     key:'快捷便当',
-    icon:'',
+    icon: 'kuaijiebiandang',
     children:[]
 },{
     title:'特色菜系',
     key:'特色菜系',
-    icon:'',
+    icon:'tesecaixi',
     children:[]
 },{
     title:'全球美食',
     key:'全球美食',
-    icon:'',
+    icon:'quanqiumeishi',
     children:[]
 },{
     title:'小吃夜宵',
     key:'小吃夜宵',
-    icon:'',
+    icon:'xiaochiyexiao',
     children:[]
 },{
     title:'甜品饮品',
@@ -74,12 +74,12 @@ export const categoryList = [{
 },{
     title:'生鲜买菜',
     key:'生鲜买菜',
-    icon:'',
+    icon:'shengxianmaicai',
     children:[]
 },{
     title:'商店超市',
     key:'商店超市',
-    icon:'',
+    icon:'shangdianchaoshi',
     children:[]
 },{
     title:'鲜花绿植',
@@ -89,17 +89,17 @@ export const categoryList = [{
 },{
     title:'医药健康',
     key:'医药健康',
-    icon:'',
+    icon:'yiyaojiankang',
     children:[]
 },{
     title:'早餐',
     key:'早餐',
-    icon:'',
+    icon:'zaocan',
     children:[]
 },{
     title:'午餐',
     key:'午餐',
-    icon:'',
+    icon:'wucan',
     children:[]
 },{
     title:'下午茶',
@@ -109,12 +109,12 @@ export const categoryList = [{
 },{
     title:'晚餐',
     key:'晚餐',
-    icon:'',
+    icon:'wancan',
     children:[]
 },{
     title:'夜宵',
     key:'夜宵',
-    icon:'',
+    icon:'yexiao',
     children:[]
 }]
 
