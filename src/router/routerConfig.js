@@ -10,7 +10,9 @@ export const appRouter = [{
             path:'/main',
             name:'main',
             component: () => import('@/views/main/main.vue'),
-            redirect: 'main/take-away',
+            redirect: {
+                name:'take-away'
+            },
             children: [{
                     path: 'take-away',
                     name: 'take-away',
@@ -18,7 +20,19 @@ export const appRouter = [{
                     meta: {
                         
                     },
-                    component: () => import('@/views/main/take-away/take-away.vue'),
+                    component: () => import('@/views/main/take-away/index.vue'),
+                    redirect: {
+                        name: 'take-away-main'
+                    },
+                    children: [{
+                        path: 'take-away-main',
+                        name: 'take-away-main',
+                        title: '外卖主页',
+                        meta: {
+
+                        },
+                        component: () => import('@/views/main/take-away/main/index.vue'),
+                    }]
                 }, 
                 {
                     path: 'orders',

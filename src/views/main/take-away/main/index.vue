@@ -1,5 +1,5 @@
 <template>
-    <div class="take_away_wrapper">
+    <div class="take_away_main_wrapper">
 		<Locate :data='locate'></Locate>
 		<SearchAll></SearchAll>
 		<!-- <Activity></Activity>  -->
@@ -7,11 +7,11 @@
     </div>
 </template>
 <script>
-import Locate from '@/views/main/take-away/locate/locate';
-import SearchAll from '@/views/main/take-away/search-all/search-all';
-import Activity from '@/views/main/take-away/activity/activity';
-import Category from '@/views/main/take-away/category/category';
-
+import Locate from '@/views/main/take-away/main/locate/locate';
+import SearchAll from '@/views/main/take-away/main/search-all/search-all';
+import Activity from '@/views/main/take-away/main/activity/activity';
+import Category from '@/views/main/take-away/main/category/category';
+import ShopList from '@/views/main/take-away/main/shop-list/shop-list';
 
 export default {
     components:{

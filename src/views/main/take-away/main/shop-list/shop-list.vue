@@ -11,7 +11,7 @@
     </div>
 </template>
 <script>
-import Shop from '@/views/main/shopList/shop';
+import Shop from '@/views/main/take-away/main/shop-list/shop';
 import { shopsData } from '@/assets/mock/shop-list-data';
 export default {
     props: {
