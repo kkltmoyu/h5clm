@@ -6,19 +6,17 @@
             <div class='r'></div>
         </div>
         <div class='shop_list'>
-            <Shop v-for='item in shopData' :data='item' :key='item.id'></Shop>
+            <Shop v-for='item in datas' :data='item' :key='item.id'></Shop>
         </div>
     </div>
 </template>
 <script>
 import Shop from '@/views/main/take-away/main/shop-list/shop';
-import { shopsData } from '@/assets/mock/shop-list-data';
+import { shopsData } from '@/assets/mock/take-away/shop-list-data';
 export default {
-    props: {
-        data: Object
-    },
     data() {
         return {
+            datas:shopData
         }
     },
     components:{

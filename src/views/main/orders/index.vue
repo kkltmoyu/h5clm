@@ -1,15 +1,16 @@
 <template>
     <div class="orders_wrapper">
-        orders
+		<keep-alive>
+            <router-view/>
+        </keep-alive>
     </div>
 </template>
 <script>
 
 export default {
-    components:{
-    },
     data() {
         return {
+        	
         }
     }
 }

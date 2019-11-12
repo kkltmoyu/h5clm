@@ -2,7 +2,7 @@
     <div class="take_away_main_wrapper">
 		<Locate :data='locate'></Locate>
 		<SearchAll></SearchAll>
-		<!-- <Activity></Activity>  -->
+		<Activity></Activity> 
 		<Category></Category>
     </div>
 </template>
