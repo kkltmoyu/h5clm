@@ -6,7 +6,7 @@
 </template>
 <script>
 import OrderList from '@/views/main/orders/main/order-list/order-list';
-import ordersData from '@/assets/mock/orders/order-list-data';
+import { ordersData } from '@/assets/mock/orders/order-list-data';
 
 export default {
     components:{
@@ -14,6 +14,7 @@ export default {
     },
     data() {
         return {
+            ordersData:ordersData
         }
     },
     methods:{

@@ -38,7 +38,7 @@ export const appRouter = [{
             name: 'orders',
             title: '订单',
             redirect: {
-                name: 'take-away-main'
+                name: 'orders-main'
             },
             meta: {
 
@@ -59,7 +59,7 @@ export const appRouter = [{
                 meta: {
 
                 },
-                component: () => import('@/views/main/orders/main/order-detail/order-detail.vue'),
+                component: () => import('@/views/main/orders/order-detail/order-detail.vue'),
             }]
         },
         {

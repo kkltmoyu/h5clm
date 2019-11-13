@@ -4,22 +4,22 @@ export const orderDetail = {
     status:'已送达',
     foodList:[{
         name:'米饭',
-        src:'icon1',
+        src: 'mifan.webp',
         number:1,
         cost:3
     }, {
         name: '水煮肉大份',
-        src: 'icon1',
+        src: 'shuizhurou.webp',
         number: 1,
         cost: 18
     }, {
         name: '可乐',
-        src: 'icon1',
+        src: 'kekoukele.webp',
         number: 1,
         cost: 4
     }, {
         name: '鸭血',
-        src: 'icon1',
+        src: 'yaxue',
         number: 1,
         cost: 5
     }],

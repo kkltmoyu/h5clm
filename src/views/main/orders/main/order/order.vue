@@ -2,7 +2,7 @@
     <div class="order_wrapper">
         <div class='content' @click='orderEv("inspect")'>
             <div class='l'>
-                <img :src='data.src' :alt='data.name'/>
+                <img :src='require("@"+shopUrl+data.src)' :alt='data.name'/>
             </div>
             <div class='r'>
                 <div class='top'>
@@ -27,18 +27,22 @@
     </div>
 </template>
 <script>
+import { shopUrl } from '@/assets/js/constants';
 
 export default {
     props:{
         data:{
             type:Object,
-            default:{}
+            default:()=>{
+                return {}
+            }
         }
     },
     components:{
     },
     data() {
         return {
+            staticUrl:staticUrl
         }
     },
     methods:{

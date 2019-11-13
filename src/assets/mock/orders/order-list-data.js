@@ -1,7 +1,7 @@
 export const ordersData = [{
     id:1,
-    name:'name1',
-    src: '',
+    name:'金百万',
+    src: 'jinbaiwan.webp',
     status:'已送达',
     info:'水煮肉等5件餐品',
     cost:18.9,
@@ -9,26 +9,26 @@ export const ordersData = [{
     isComment:false
 },{
     id: 2,
-    name: 'name2',
-    src: '',
+    name: '武圣羊杂割',
+    src: 'wushengyangzage',
     status: '配送中',
-    info: '等3件餐品',
+    info: '羊杂汤套餐等2件餐品',
     cost: 23.9,
     date: '2019-05-21 22:15',
     isComment: true
 },{
     id: 3,
-    name: 'name3',
-    src: '',
+    name: '站点披萨',
+    src: 'zhandianpisa.webp',
     status: '餐品制作中',
-    info: '等4件餐品',
-    cost: 25.8,
+    info: '等1件餐品',
+    cost: 35.8,
     date: '2019-05-21 12:22',
     isComment: true
 },{
-    id: 1,
+    id: 4,
     name: 'name',
-    src: '',
+    src: 'kfc.webp',
     status: '餐品制作中',
     info: '爱等5件餐品',
     cost: 20.0,

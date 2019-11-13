@@ -1,6 +1,6 @@
 <template>
     <div class="order_list_wrapper">
-        <Order v-for='item in datas' :key='item.id' @orderEv='orderEv'></Order>
+        <Order v-for='item in data' :data='item' :key='item.id' @orderEv='orderEv'></Order>
     </div>
 </template>
 <script>
@@ -10,14 +10,18 @@ export default {
     props:{
         data:{
             type:Array,
-            default:[]
+            default:()=>{
+                return [];
+            }
         }
     },
     components:{
+        Order
+    },
+    created(){
     },
     data() {
         return {
-            datas:data
         }
     },
     methods:{
