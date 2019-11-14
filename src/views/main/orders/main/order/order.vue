@@ -2,7 +2,7 @@
     <div class="order_wrapper">
         <div class='content' @click='orderEv("inspect")'>
             <div class='l'>
-                <img :src='require("@"+shopUrl+data.src)' :alt='data.name'/>
+                <img :src='require("@/"+shopUrl+data.src)' :alt='data.name'/>
             </div>
             <div class='r'>
                 <div class='top'>
@@ -16,7 +16,7 @@
                 </div>
                 <div class='bottom'>
                     <span class='info'>{{data.info}}</span>
-                    <span class='cost'>{{data.cost}}</span>
+                    <span class='cost'>￥{{data.cost}}</span>
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@ export default {
     },
     data() {
         return {
-            staticUrl:staticUrl
+            shopUrl:shopUrl
         }
     },
     methods:{
@@ -55,13 +55,14 @@ export default {
 
 <style lang="scss" scoped>
 .order_wrapper {
-    width:100%;
     background: #fff;
     border:f-cal-border-width(1) solid #ebebeb;
+    padding:10px;
 
     .content{
         display:flex;
         .l{
+            margin-top:10px;
             img{
                 width:80px;
                 height:80px;
@@ -71,24 +72,43 @@ export default {
         .r{
             flex:1;
             .top{
+                font-size:0.25rem;
                 border-bottom:f-cal-border-width(1) solid #ebebeb;
-                .i_l{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:5px 10px 5px 0;
 
+                .i_l{
+                    .name{
+                        text-align: left;
+                        font-weight: bold;
+                        padding:5px 10px;
+                    }
+
+                    .date{
+                        color:rgba(23,35,61,0.5);
+                        padding:5px 10px;
+                    }
                 }
 
                 .i_r{
-
+                    color:rgba(23,35,61,0.7);
                 }
             }
 
             .bottom{
-
+                font-size:0.25rem;
+                padding:15px 10px;
+                display:flex;
+                justify-content: space-between;
             }
         }
     }
     .opeartion{
         display:flex;
         justify-content: flex-end;
+        padding:10px 10px;
     }
 }
 

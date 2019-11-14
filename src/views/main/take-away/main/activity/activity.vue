@@ -31,7 +31,6 @@ export default {
     },
     methods: {
         handleChange(){
-            console.log('handleChange')
         }
     }
 }

@@ -27,11 +27,16 @@ export default {
                     
                     break;
                 case 'inspect':
-                    
+                    this.inspectOrder(params);
                     break;
                 default:
                     break;
             }
+        },
+        inspectOrder(params){
+            this.$router.push({
+                name:'order-detail'
+            })
         }
     }
 }
@@ -40,6 +45,15 @@ export default {
 <style lang="scss" scoped>
 .orders_wrapper {
    background: $bg-gray;
+
+    .title{
+        font-size: 0.3rem;
+        padding-left:20px;
+        display:flex;
+        align-items: center;
+        height:40px;
+        justify-content: flex-start
+    }
 }
 
 </style>
