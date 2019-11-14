@@ -1,8 +1,8 @@
 <template>
     <div class="order_detail_wrapper">
         <div class='title'>
-            <i class='back iconfont iconarrow-lift'></i>
             <div class='status'>订单{{datas.status}}</div>
+            <i class='back iconfont iconarrow-right'></i>
         </div>
         <div class='deliver_area'>
             <div class='name'>{{datas.name}}</div>
@@ -13,8 +13,8 @@
             >
                 <div class='l'>
                     <img
-                        :src='datas.src'
-                        :alt='datas.name'
+                        :src='require("@/"+foodUrl+item.src)'
+                        :alt='item.name'
                     />
                     <span class='f_name'>{{item.name}}</span>
                 </div>
@@ -28,7 +28,9 @@
     </div>
 </template>
 <script>
-import { orderDetail } from '@/assets/mock/orders/order-detail-data'
+import { orderDetail } from '@/assets/mock/orders/order-detail-data';
+import { foodUrl } from '@/assets/js/constants';
+
 export default {
     // props:{
     //     data:{
@@ -40,7 +42,8 @@ export default {
     },
     data() {
         return {
-            datas: orderDetail
+            datas: orderDetail,
+            foodUrl: foodUrl
         }
     },
     methods: {
@@ -51,22 +54,60 @@ export default {
 
 <style lang="scss" scoped>
 .order_detail_wrapper {
-    width: 100%;
     background: $bg-gray;
+    padding: 0 10px;
 
     .title {
+        font-size:0.35rem;
+        display:flex;
+        padding:35px 0 15px 10px;
+        // background: linear-gradient(#2185F0,#fff);
+        background: #2185F0;
+        color:#fff;
     }
 
     .deliver_area {
+        margin-top:10px;
+        background: #fff;
+        box-shadow: 0 1px 2px 0 rgba(23, 35, 61, 0.35);
+        width:100%;
+
+        .name{
+            text-align: left;
+            padding:10px 15px;
+            border-bottom:f-cal-border-width(1) solid #ebebeb;
+            font-size:0.3rem;
+        }
         .item_wrapper {
+            font-size:0.25rem;
             display: flex;
+            justify-content: space-between;
 
             .l {
+                padding:15px 25px;
                 flex: 1;
+                text-align: left;
+                display:flex;
+                align-items: center;
+
+                img{
+                    width:30px;
+                    height:30px;
+                    margin-right:10px;
+                }
             }
 
             .r {
+                display:flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding:15px 25px;
+                text-align: right;
                 width: 100px;
+
+                .cost{
+                    margin-left:20px;
+                }
             }
         }
     }

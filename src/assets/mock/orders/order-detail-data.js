@@ -1,6 +1,6 @@
 export const orderDetail = {
     id:1,
-    name:'name1',
+    name:'金百万',
     status:'已送达',
     foodList:[{
         name:'米饭',
@@ -19,7 +19,7 @@ export const orderDetail = {
         cost: 4
     }, {
         name: '鸭血',
-        src: 'yaxue',
+        src: 'yaxue.webp',
         number: 1,
         cost: 5
     }],
