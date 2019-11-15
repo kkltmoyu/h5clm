@@ -44,7 +44,11 @@ export default {
 
 <style lang="scss" scoped>
 .orders_wrapper {
-   background: $bg-gray;
+    background: $bg-gray;
+    height:calc(100% - 50px);
+    padding-bottom:30px;
+    overflow-y:auto;
+    // margin-top:$back-header;
 
     .title{
         font-size: 0.3rem;
@@ -52,7 +56,7 @@ export default {
         display:flex;
         align-items: center;
         height:40px;
-        justify-content: flex-start
+        justify-content: flex-start;
     }
 }
 

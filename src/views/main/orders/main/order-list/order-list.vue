@@ -34,7 +34,7 @@ export default {
 
 <style lang="scss" scoped>
 .order_list_wrapper {
-   
+   height:100%;
 }
 
 </style>

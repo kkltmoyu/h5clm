@@ -49,7 +49,7 @@ export const appRouter = [{
                 name: 'orders-main',
                 title: '订单主页',
                 meta: {
-
+                    
                 },
                 component: () => import('@/views/main/orders/main/index.vue'),
             }, {
@@ -57,7 +57,7 @@ export const appRouter = [{
                 name: 'order-detail',
                 title: '订单详情',
                 meta: {
-
+                    showBack:true
                 },
                 component: () => import('@/views/main/orders/order-detail/order-detail.vue'),
             }]

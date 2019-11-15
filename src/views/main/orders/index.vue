@@ -1,5 +1,5 @@
 <template>
-    <div class="orders_wrapper">
+    <div class="orders">
 		<keep-alive>
             <router-view/>
         </keep-alive>
@@ -12,13 +12,18 @@ export default {
         return {
         	
         }
+    },
+    methods:{
+        back(){
+            this.$router.back();
+        }
     }
 }
 </script>
 
 <style lang="scss" scoped>
-.orders_wrapper {
-   
+.orders {
+    height:100%;
 }
 
 </style>

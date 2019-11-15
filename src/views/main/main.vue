@@ -1,5 +1,8 @@
 <template>
     <div class="main_wrapper">
+        <div class='header' v-if='showBack'>
+            <i href='javascript:void(0)' class='iconfont icon iconarrow-lift' @click='back'></i>
+        </div>
         <div class="content">
             <keep-alive>
                 <router-view/>
@@ -17,6 +20,23 @@ export default {
     },
     data() {
         return {
+            showBack:false,
+        }
+    },
+    created() {
+        this.init();
+    },
+    watch:{
+        $route(to) {
+            this.handlerMenu(to);
+        },
+    },
+    methods:{
+        init(){
+            this.handlerMenu(this.$route);
+        },
+        handlerMenu(to){
+            this.showBack = to.meta.showBack || false;
         }
     }
 }
@@ -26,10 +46,25 @@ export default {
 .main_wrapper {
     height:100%;
 
+    .header{
+        z-index:100;
+        width:100%;
+        height:$back-header;
+        background: #2185F0;
+        color:#fff;
+        display:flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left:20px;
+
+        i{
+            font-size:0.5rem;
+        }
+    }
     .content {
         overflow-y:auto;
         width: 100%;
-        height: calc(100% - 100px);
+        height: calc(100% - 60px);
     }
 }
 

@@ -27,6 +27,7 @@
         <div class='comment_wrapper card'>
             <p>用餐体验满意度</p>
             <Stars :max="5" class='stars'></Stars>
+            <mt-field placeholder="请输入评价信息" type="textarea" rows="4" v-model="comment"></mt-field>
         </div>
     </div>
 </template>
@@ -48,7 +49,8 @@ export default {
     data() {
         return {
             datas: orderDetail,
-            foodUrl: foodUrl
+            foodUrl: foodUrl,
+            comment:'',
         }
     },
     methods: {
@@ -60,12 +62,14 @@ export default {
 <style lang="scss" scoped>
 .order_detail_wrapper {
     background: $bg-gray;
-    padding: 0 10px;
+    // padding: 0 10px;
+    position: relative;
+    height:100%;
 
     .title {
         font-size:0.35rem;
         display:flex;
-        padding:35px 0 15px 10px;
+        padding:15px 0 15px 10px;
         // background: linear-gradient(#2185F0,#fff);
         background: #2185F0;
         color:#fff;
@@ -118,6 +122,7 @@ export default {
     }
 
     .comment_wrapper{
+        padding-bottom:10px;
         p{
             font-size:0.3rem;
             padding-top:20px;
