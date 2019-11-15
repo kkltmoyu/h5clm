@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-import Footer from '@/views/footer/footer'
+import Footer from '@/views/footer/footer';
 
 export default {
     components:{
@@ -28,14 +28,14 @@ export default {
     },
     watch:{
         $route(to) {
-            this.handlerMenu(to);
+            this.handlerBack(to);
         },
     },
     methods:{
         init(){
-            this.handlerMenu(this.$route);
+            this.handlerBack(this.$route);
         },
-        handlerMenu(to){
+        handlerBack(to){
             this.showBack = to.meta.showBack || false;
         }
     }

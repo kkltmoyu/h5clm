@@ -21,8 +21,8 @@
             </div>
         </div>
         <div class='opeartion'>
-            <mt-button type="default" v-if='data.isComment' @click='orderEv("again")'>再来一单</mt-button>
-            <mt-button type="default" v-else @click='orderEv("comment")'>评价</mt-button>
+            <mt-button type="default" v-if='data.isComment' @click='orderEv("comment")'>评价</mt-button>
+            <mt-button type="default" @click='orderEv("again")'>再来一单</mt-button>
         </div>
     </div>
 </template>
