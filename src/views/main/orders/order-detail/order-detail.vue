@@ -4,7 +4,7 @@
             <div class='status'>订单{{datas.status}}</div>
             <i class='back iconfont iconarrow-right'></i>
         </div>
-        <div class='deliver_area'>
+        <div class='card deliver_area'>
             <div class='name'>{{datas.name}}</div>
             <div
                 class='item_wrapper'
@@ -24,10 +24,14 @@
                 </div>
             </div>
         </div>
-        <div class='comment'></div>
+        <div class='comment_wrapper card'>
+            <p>用餐体验满意度</p>
+            <Stars :max="5" class='stars'></Stars>
+        </div>
     </div>
 </template>
 <script>
+import Stars from '@/components/stars/stars';
 import { orderDetail } from '@/assets/mock/orders/order-detail-data';
 import { foodUrl } from '@/assets/js/constants';
 
@@ -39,6 +43,7 @@ export default {
     //     }
     // },
     components: {
+        Stars
     },
     data() {
         return {
@@ -66,7 +71,7 @@ export default {
         color:#fff;
     }
 
-    .deliver_area {
+    .card {
         margin-top:10px;
         background: #fff;
         box-shadow: 0 1px 2px 0 rgba(23, 35, 61, 0.35);
@@ -109,6 +114,17 @@ export default {
                     margin-left:20px;
                 }
             }
+        }
+    }
+
+    .comment_wrapper{
+        p{
+            font-size:0.3rem;
+            padding-top:20px;
+        }
+
+        .stars{
+            margin:10px 0;
         }
     }
 }
