@@ -38,7 +38,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .activity_wrapper {
-	position:absolute;
 	top:100px;
     width:100%;
     font-size:0.5rem;

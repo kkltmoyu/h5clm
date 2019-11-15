@@ -31,6 +31,14 @@ export const appRouter = [{
 
                 },
                 component: () => import('@/views/main/take-away/main/index.vue'),
+            },{
+                path: 'food-main',
+                name: 'food-main',
+                title: '',
+                meta: {
+                    showBack:true,
+                },
+                component: () => import('@/views/main/take-away/food-main/food-main.vue'),
             }]
         },
         {
@@ -49,7 +57,7 @@ export const appRouter = [{
                 name: 'orders-main',
                 title: '订单主页',
                 meta: {
-                    
+
                 },
                 component: () => import('@/views/main/orders/main/index.vue'),
             }, {

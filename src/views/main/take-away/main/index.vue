@@ -1,7 +1,9 @@
 <template>
     <div class="take_away_main_wrapper">
-		<Locate :data='locate'></Locate>
-		<SearchAll></SearchAll>
+		<div class='bg'>
+			<Locate :data='locate'></Locate>
+			<SearchAll></SearchAll>
+		</div>
 		<Activity></Activity> 
 		<Category></Category>
     </div>
@@ -32,7 +34,9 @@ export default {
 
 <style lang="scss" scoped>
 .take_away_wrapper {
-   
+   .bg{
+	   background: #2185F0;
+   }
 }
 
 </style>

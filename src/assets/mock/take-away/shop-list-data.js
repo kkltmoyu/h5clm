@@ -1,7 +1,7 @@
 export const shopsData = [{
     id:1,
-    name:'name1',
-    icon:'icon',
+    name:'鱼多美(西单店)',
+    src: 'yuduomei.webp',
     rating: 4.9,
     sale_count:166,
     float_delivery_fee:3.5,
@@ -9,9 +9,9 @@ export const shopsData = [{
     distance:3000,
     wait:30,
     activities:[{
-        name: '大芒果推荐'
+        name: '其他快餐'
     },{
-        name: '西城区受欢迎的奶茶店'
+        name: '欢迎光临'
     }],
     supports:[{
         name:'开发票',
@@ -20,27 +20,27 @@ export const shopsData = [{
     }]
 }, {
     id:2,
-    name: 'name1',
-    icon: 'icon',
+    name: '窑鸡王',
+    src: 'yaojiwang.webp',
     rating: 4.8,
     float_delivery_fee: 5,
     send_line: 20,
     distance: 2500,
     wait: 25,
     activities: [{
-        name: '大芒果推荐'
+        name: '其他小吃'
     }, {
-        name: '西城区受欢迎的奶茶店'
+        name: '美味好吃'
     }],
     supports: [{
         name: '开发票',
     }, {
-        name: '阳关餐厅',
+        name: '免费打包',
     }]
 },{
     id:3,
-    name: 'name1',
-    icon: 'icon',
+    name: 'CoCo都可(复兴门店)',
+    src: 'cocodouke.webp',
     rating: 4.9,
     float_delivery_fee: 3.5,
     send_line: 0,
@@ -58,17 +58,17 @@ export const shopsData = [{
     }]
 },{
     id:4,
-    name: 'name1',
-    icon: 'icon',
+    name: '满溢披萨',
+    src: 'manyipisa.webp',
     rating: 4.5,
     float_delivery_fee: 3.5,
     send_line: 30,
     distance: 4700,
     wait: 35,
     activities: [{
-        name: '大芒果推荐'
+        name: '披萨'
     }, {
-        name: '西城区受欢迎的奶茶店'
+        name: '馅料多'
     }],
     supports: [{
         name: '开发票',

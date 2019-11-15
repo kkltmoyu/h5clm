@@ -1,5 +1,5 @@
 <template>
-    <div class="locate_wrapper">
+    <div class="search_wrapper">
        <mt-search v-model="value" @keyup.enter.native='search' placeholder='搜索'></mt-search>
     </div>
 </template>
@@ -23,24 +23,19 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-.locate_wrapper {
+.search_wrapper {
     width:100%;
     font-size:0.5rem;
-    height:40px;
-    // .mint-searchbar{
-    //     background:#fff;
-    // }
 }
 </style>
 <style lang="scss">
-.locate_wrapper{
+.search_wrapper{
+    height:60px;
     .mint-searchbar{
         background:#fff;
 
         .mint-searchbar-inner{
             border: f-cal-border-width(3) solid #d9d9d9;
-            // border-radius:50%;
-            // background:#d9d9d9;
         }
 
         .mint-searchbar-cancel{

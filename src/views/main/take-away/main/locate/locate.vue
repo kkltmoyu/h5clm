@@ -25,14 +25,15 @@ export default {
 <style scoped lang="scss">
 .locate_wrapper {
     font-size:0.5rem;
-    text-align:left;
-    padding:0.1rem 0.2rem;
+    height: 50px;
+    display:flex;
+    justify-content: flex-start;
+    align-items:center;
+    padding-left:10px;
+    color:#fff;
+
     i{
         font-size:0.5rem;
-    }
-
-    .i_locate{
-        color:#2185F0;
     }
 }
 </style>
