@@ -51,7 +51,7 @@ export default {
 .category_wrapper {
     width:100%;
     font-size:0.5rem;
-    height:250px;
+    height:205px;
 
     .swipe{
         display:flex;

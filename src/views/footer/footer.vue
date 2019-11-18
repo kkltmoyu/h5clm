@@ -55,10 +55,10 @@ export default {
     display:flex;
     align-items: center;
     justify-content: space-around;
-    border-top:f-cal-border-width(2) solid #ebebeb;
+    border-top:f-cal-border-width(1) solid #8b8585;
 
     a{
-        color:#ebebeb;
+        color:#8b8585;
         text-decoration: none;
         font-size:0.25rem;
         height:100%;
@@ -76,7 +76,7 @@ export default {
         }
     }
     a:not(:first-child){
-        border-left:1px solid #ebebeb;
+        border-left:1px solid #8b8585;;
     }
     a:hover{
         cursor: pointer;

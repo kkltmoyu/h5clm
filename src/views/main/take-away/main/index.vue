@@ -1,12 +1,12 @@
 <template>
     <div class="take_away_main_wrapper">
-		<!-- <div class='bg'>
+		<div class='bg'>
 			<Locate :data='locate'></Locate>
 			<SearchAll></SearchAll>
 		</div>
 		<Activity></Activity> 
-		<Category></Category> -->
-		<ShopList></ShopList>
+		<Category></Category>
+		<ShopList @emitEv='evDispatch'></ShopList>
     </div>
 </template>
 <script>
@@ -30,7 +30,23 @@ export default {
         		value:'bj'
         	}
         }
-    }
+	},
+	methods:{
+		evDispatch(type,data){
+            switch(type){
+                case 'chosen':
+					this.chosen(data);
+                    break;
+                default:
+                    break;
+            }
+		},
+		chosen(data){
+			this.$router.push({
+				name:'food-main'
+			})
+		}
+	}
 }
 </script>
 

@@ -42,5 +42,6 @@ export default {
     width:100%;
     font-size:0.5rem;
     height:200px;
+    margin-top:10px;
 }
 </style>

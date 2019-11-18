@@ -1,5 +1,5 @@
 <template>
-    <div class="shop_wrapper">
+    <div class="shop_wrapper" @click='chosen'>
        <div class='img_wrapper'>
            <img :src='require("@/"+shopUrl+data.src)' :alt='data.name'/>
        </div>
@@ -23,10 +23,10 @@
                </div>
            </div>
            <div class='activity'>
-               <span v-for='item in data.activities' :key='item.name'>{{item.name}}</span>
+               <span v-for='item in data.activities' :key='item.name' class='item'>{{item.name}}</span>
            </div>
            <div class='support'>
-               <span v-for='item in data.supports' :key='item.name'>{{item.name}}</span>
+               <span v-for='item in data.supports' :key='item.name' class='item'>{{item.name}}</span>
            </div>
        </div>
     </div>
@@ -49,29 +49,32 @@ export default {
     mounted(){
     },
     methods: {
-        
+        chosen(){
+            this.$emit('emitEv','chosen',this.data);
+        }
     }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .shop_wrapper {
-    width:100%;
+    // width:100%;
     font-size:0.5rem;
     display:flex;
     margin-top:10px;
+    padding:0 10px;
 
     .img_wrapper{
         img{
-            width:60px;
-            height:60px;
+            width:50px;
+            height:50px;
         }
     }
 
     .info_wrapper{
         flex:1;
         border-bottom:f-cal-border-width(1) solid #ebebeb;
-        padding: 0 5px;
+        padding: 10px 15px;
 
         .title{
             font-size:0.3rem;
@@ -112,10 +115,34 @@ export default {
                 .time{
                     margin-right:10px;
                 }
+            }
+        }
 
-                .distance{
+        .activity{
+            font-size:0.2rem;
+            text-align: left;
+            margin-top:10px;
+            margin-bottom:10px;
 
-                }
+            .item{
+                background: rgba(233, 134, 95, 0.2);
+                color:rgba(255, 132, 84);
+                padding: 2px 5px;
+            }
+
+            .item:not(:first-child){
+                margin-left:5px;
+            }
+        }
+
+        .support{
+            font-size:0.2rem;
+            text-align: left;
+
+            .item{
+                color:rgb(201, 37, 37);
+                padding:2px 5px;
+                border:f-cal-border-width(1) solid rgba(201, 37, 37,0.8);
             }
         }
     }

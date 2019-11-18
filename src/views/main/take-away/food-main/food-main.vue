@@ -1,6 +1,6 @@
 <template>
     <div class="food_main_wrapper">
-        
+        food_main
     </div>
 </template>
 <script>

@@ -6,7 +6,7 @@
             <div class='r'></div>
         </div>
         <div class='shop_list'>
-            <Shop v-for='item in datas' :data='item' :key='item.id'></Shop>
+            <Shop v-for='item in datas' :data='item' :key='item.id' @emitEv='emitEv'></Shop>
         </div>
     </div>
 </template>
@@ -28,6 +28,9 @@ export default {
     mounted(){
     },
     methods: {
+        emitEv(type,data){
+            this.$emit('emitEv',type,data);
+        },
         
     }
 }
@@ -43,6 +46,7 @@ export default {
         font-size:0.3rem;
         text-align: left;
         font-weight:600;
+        padding-left:10px;
     }
     
     .filter{

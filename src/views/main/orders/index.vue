@@ -13,11 +13,6 @@ export default {
         	
         }
     },
-    methods:{
-        back(){
-            this.$router.back();
-        }
-    }
 }
 </script>
 
@@ -25,5 +20,4 @@ export default {
 .orders {
     height:100%;
 }
-
 </style>

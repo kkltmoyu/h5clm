@@ -37,6 +37,9 @@ export default {
         },
         handlerBack(to){
             this.showBack = to.meta.showBack || false;
+        },
+        back(){
+            this.$router.back();
         }
     }
 }
