@@ -76,7 +76,7 @@ export default {
         }
     }
     a:not(:first-child){
-        border-left:1px solid #8b8585;;
+        border-left:f-cal-border-width(1) solid #8b8585;;
     }
     a:hover{
         cursor: pointer;

@@ -27,7 +27,7 @@ export default {
     data() {
         return {
         	locate:{
-        		value:'bj'
+        		value:'王府井商业街'
         	}
         }
 	},
@@ -51,7 +51,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.take_away_wrapper {
+.take_away_main_wrapper {
+	padding-bottom:10px;
    .bg{
 	   background: #2185F0;
    }

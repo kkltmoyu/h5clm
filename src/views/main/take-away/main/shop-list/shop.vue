@@ -65,6 +65,7 @@ export default {
     padding:0 10px;
 
     .img_wrapper{
+        margin-top:10px;
         img{
             width:50px;
             height:50px;
@@ -143,6 +144,10 @@ export default {
                 color:rgb(201, 37, 37);
                 padding:2px 5px;
                 border:f-cal-border-width(1) solid rgba(201, 37, 37,0.8);
+            }
+
+            .item:not(:first-child){
+                margin-left:5px;
             }
         }
     }

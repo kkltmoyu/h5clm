@@ -1,7 +1,7 @@
 <template>
     <div class="locate_wrapper">
         <i class="iconfont icontogo i_locate"></i>
-        <span>{{data.value}}</span>
+        <span class='location'>{{data.value}}</span>
         <i class="iconfont iconarrow-down"></i>
     </div>
 </template>
@@ -33,7 +33,11 @@ export default {
     color:#fff;
 
     i{
-        font-size:0.5rem;
+        font-size:0.3rem;
+    }
+
+    .location{
+        font-size:0.25rem;
     }
 }
 </style>
