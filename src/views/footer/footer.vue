@@ -16,15 +16,15 @@ export default {
             list:[{
                 name:'take',
                 icon:'iconwaimai',
-                title:'wai'
+                title:'外卖'
             },{
                 name:'orders',
                 icon:'iconorder',
-                title:'orders'
+                title:'订单'
             },{
                 name:'info',
                 icon:'iconusercenter',
-                title:'user'
+                title:'用户'
             }],
             routeMap:{
                 take:'take-away',
