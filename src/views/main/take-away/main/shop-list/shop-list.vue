@@ -1,6 +1,6 @@
 <template>
     <div class="shop_list_wrapper">
-        <div>推荐商家</div>
+        <div class='recommend_shops'>推荐商家</div>
         <div class='filter'>
             <div class='l'></div>
             <div class='r'></div>
@@ -16,7 +16,7 @@ import { shopsData } from '@/assets/mock/take-away/shop-list-data';
 export default {
     data() {
         return {
-            datas:shopData
+            datas:shopsData
         }
     },
     components:{
@@ -37,6 +37,13 @@ export default {
 .shop_list_wrapper {
     width:100%;
     font-size:0.5rem;
+    margin-top:10px;
+
+    .recommend_shops{
+        font-size:0.3rem;
+        text-align: left;
+        font-weight:600;
+    }
     
     .filter{
         display:flex;

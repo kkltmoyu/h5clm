@@ -1,6 +1,6 @@
 <template>
     <div class="category_wrapper">
-        <mt-swipe @change="handleChange">
+        <mt-swipe @change="handleChange" :auto='-1'>
             <mt-swipe-item>
                 <div class='swipe'>
                     <span v-for='item in ctlist1' :key='item.title' class='item' @click='chosenCategory'>
@@ -72,6 +72,13 @@ export default {
                 font-size:0.125rem;
             }
         }
+    }
+}
+</style>
+<style lang="scss">
+.category_wrapper {
+    .mint-swipe-indicators{
+        top: 180px;
     }
 }
 </style>

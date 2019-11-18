@@ -1,11 +1,12 @@
 <template>
     <div class="take_away_main_wrapper">
-		<div class='bg'>
+		<!-- <div class='bg'>
 			<Locate :data='locate'></Locate>
 			<SearchAll></SearchAll>
 		</div>
 		<Activity></Activity> 
-		<Category></Category>
+		<Category></Category> -->
+		<ShopList></ShopList>
     </div>
 </template>
 <script>
@@ -20,7 +21,8 @@ export default {
     	Locate,
     	SearchAll,
 		Activity,
-		Category
+		Category,
+		ShopList
     },
     data() {
         return {
