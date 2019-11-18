@@ -38,7 +38,7 @@ export const appRouter = [{
                 meta: {
                     showBack:true,
                 },
-                component: () => import('@/views/main/take-away/food-main/food-main.vue'),
+                component: () => import('@/views/main/take-away/food-main/index.vue'),
             }]
         },
         {

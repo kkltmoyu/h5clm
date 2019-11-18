@@ -20,7 +20,7 @@ export const shopsData = [{
     }]
 }, {
     id:2,
-    name: '窑鸡王',
+    name: '窑鸡王(东直门店)',
     src: 'yaojiwang.webp',
     rating: 4.8,
     float_delivery_fee: 5,
@@ -58,7 +58,7 @@ export const shopsData = [{
     }]
 },{
     id:4,
-    name: '满溢披萨',
+    name: '满溢披萨(广安门店)',
     src: 'manyipisa.webp',
     rating: 4.5,
     float_delivery_fee: 3.5,
