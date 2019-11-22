@@ -67,7 +67,8 @@ export default {
     .content {
         overflow-y:auto;
         width: 100%;
-        height: calc(100% - 50px);
+        //50px为上面back panel高度，50px为底部menu高度，15px为修正高度
+        height: calc(100% - 50px - 50px - 15px);
     }
 }
 

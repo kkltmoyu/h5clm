@@ -77,6 +77,8 @@ export default {
 
 <style lang="scss" scoped>
 .food_main_wrapper {
+    //60px为下方菜单按钮高度
+    height:calc(100% - 60px);
     .header{
         position:relative;
         .bg_wrapper{
@@ -134,10 +136,11 @@ export default {
     .content{
         text-align:left;
         font-size:0.25rem;
-        //178px为header高度，60px为下方菜单按钮高度
-        height:calc(100% - 178px - 60px);
+        //178px为header高度
+        height:calc(100% - 178px);
         overflow-y:auto;
         .category{
+            padding-left:10px;
             margin-top:10px;
             .title{
                 font-weight:600;
@@ -146,9 +149,9 @@ export default {
             .food_wrapper{
                 .food{
                     display:flex;
-                    align-items: center;
-
+                    align-items:flex-start;
                     .img_wrapper{
+                        margin-top:5px;
                         img{
                             width:50px;
                             height:50px;
@@ -157,13 +160,16 @@ export default {
 
                     .food_info{
                         flex:1;
+                        padding:5px 10px;
 
                         .name{
                             font-size:0.3rem;
                             font-weight:600;
+                            margin-bottom:5px;
                         }
 
                         .subscribe{
+                            margin-bottom:5px;
                             color:rgba(23, 35, 61, 0.55);
                         }
 
@@ -178,6 +184,14 @@ export default {
                         .opeartion{
                             display:flex;
                             justify-content: flex-end;
+
+                            i{
+                                border-radius:50%;
+                            }
+
+                            i:not(:first-child){
+                                margin-left:15px;
+                            }
 
                             .iconadd{
                                 background: #2185F0;
@@ -194,7 +208,6 @@ export default {
             }
         }
     }
-    
 }
 
 </style>
