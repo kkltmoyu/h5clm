@@ -1,2 +1,2 @@
 # h5clm
-clm frontend for h5 version 
+clm frontend of h5 version 
