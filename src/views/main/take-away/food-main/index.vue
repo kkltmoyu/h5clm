@@ -12,7 +12,7 @@
                 <p class='subscribe'>
                     <span class='comment'>评价{{data.rating}}</span>
                     <span class='sale_per_month'>月售{{data.sold_per_month}}单</span>
-                    <span class='sale_per_month'>配送约{{data.wait}}分钟</span>
+                    <span class='wait'>配送约{{data.wait}}分钟</span>
                 </p>
                 <p class='support_wrapper'>
                     <span class='item' v-for='item in data.supports' :key='item.name'>{{item.name}}</span>
@@ -20,7 +20,28 @@
             </div>
         </div>
         <div class='content'>
-
+            <div v-for='item in Object.entries(data.list)' :key='item[0]' class='category'>
+                <div class='title'>{{item[0]}}</div>
+                <div class='food_wrapper' >
+                    <div class='food' v-for='f in item[1]' :key='f.id'>
+                        <div class='img_wrapper'>
+                            <img :src='require("@/"+foodUrl+vari+f.src)' :alt='f.name'/>
+                        </div>
+                        <div class='food_info'>
+                            <p class='name'>{{f.name}}</p>
+                            <p class='subscribe'>{{f.subscribe}}</p>
+                            <p class='addition'>
+                                <span>月售{{f.sold_per_month}}</span>
+                                <span>好评{{f.nice_rate}}</span>
+                            </p>
+                            <div class='opeartion'>
+                                <i class='iconfont iconminus' @click='minus(f)' v-if='f.chosen >= 1'></i>
+                                <i class='iconfont iconadd' @click='add(f)'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -36,17 +57,26 @@ export default {
             foodUrl:foodUrl,
             data:shopFoodData,
             vari:'myps/',
+
         }
     },
     methods:{
-        
+        minus(item){
+            item.chosen --;
+        },
+        add(item){
+            if(!item.chosen)
+                item.chosen = 1;
+            else
+                item.chosen ++;
+        },
+
     }
 }
 </script>
 
 <style lang="scss" scoped>
 .food_main_wrapper {
-    
     .header{
         position:relative;
         .bg_wrapper{
@@ -83,7 +113,7 @@ export default {
                 margin:10px 0;
                 color:#666;
 
-                .sale_per_month{
+                .sale_per_month,.wait{
                     margin: 0 10px;
                 }
             }
@@ -96,6 +126,70 @@ export default {
                 }
                 .item:not(:first-child){
                     margin-left:5px;
+                }
+            }
+        }
+    }
+
+    .content{
+        text-align:left;
+        font-size:0.25rem;
+        //178px为header高度，60px为下方菜单按钮高度
+        height:calc(100% - 178px - 60px);
+        overflow-y:auto;
+        .category{
+            margin-top:10px;
+            .title{
+                font-weight:600;
+            }
+
+            .food_wrapper{
+                .food{
+                    display:flex;
+                    align-items: center;
+
+                    .img_wrapper{
+                        img{
+                            width:50px;
+                            height:50px;
+                        }
+                    }
+
+                    .food_info{
+                        flex:1;
+
+                        .name{
+                            font-size:0.3rem;
+                            font-weight:600;
+                        }
+
+                        .subscribe{
+                            color:rgba(23, 35, 61, 0.55);
+                        }
+
+                        .addition{
+                            color:rgba(23, 35, 61, 0.55);
+
+                            span:not(:first-child){
+                                margin-left:10px;
+                            }
+                        }
+
+                        .opeartion{
+                            display:flex;
+                            justify-content: flex-end;
+
+                            .iconadd{
+                                background: #2185F0;
+                                color:#fff;
+                            }
+
+                            .iconminus{
+                                color: #2185F0;
+                                background:#fff;
+                            }
+                        }
+                    }
                 }
             }
         }
