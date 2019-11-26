@@ -23,7 +23,7 @@
             <div v-for='item in Object.entries(data.list)' :key='item[0]' class='category'>
                 <div class='title'>{{item[0]}}</div>
                 <div class='food_wrapper' >
-                    <div class='food' v-for='f in item[1]' :key='f.id'>
+                    <div class='food' v-for='(f,index) in item[1]' :key='f.id'>
                         <div class='img_wrapper'>
                             <img :src='require("@/"+foodUrl+vari+f.src)' :alt='f.name'/>
                         </div>
@@ -35,8 +35,8 @@
                                 <span>好评{{f.nice_rate}}</span>
                             </p>
                             <div class='opeartion'>
-                                <i class='iconfont iconminus' @click='minus(f)' v-if='f.chosen >= 1'></i>
-                                <i class='iconfont iconadd' @click='add(f)'></i>
+                                <i class='iconfont iconminus' @click='minus(item[0],index)' v-if='f.chosen >= 1'></i>
+                                <i class='iconfont iconadd' @click='add(item[0],index)'></i>
                             </div>
                         </div>
                     </div>
@@ -57,18 +57,21 @@ export default {
             foodUrl:foodUrl,
             data:shopFoodData,
             vari:'myps/',
-
         }
     },
     methods:{
-        minus(item){
+        minus(key,index){
+            let item = this.data.list[key][index];
             item.chosen --;
+            this.$forceUpdate();
         },
-        add(item){
+        add(key,index){
+            let item = this.data.list[key][index];
             if(!item.chosen)
                 item.chosen = 1;
             else
                 item.chosen ++;
+            this.$forceUpdate();
         },
 
     }
@@ -142,6 +145,7 @@ export default {
         .category{
             padding-left:10px;
             margin-top:10px;
+            border-bottom:f-cal-border-width(1) solid #ebebeb;
             .title{
                 font-weight:600;
             }
@@ -199,6 +203,7 @@ export default {
                             }
 
                             .iconminus{
+                                border:f-cal-border-width(1) solid #2185F0;
                                 color: #2185F0;
                                 background:#fff;
                             }
