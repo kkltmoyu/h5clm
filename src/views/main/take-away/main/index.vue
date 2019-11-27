@@ -4,8 +4,9 @@
 			<Locate :data='locate'></Locate>
 			<SearchAll></SearchAll>
 		</div>
-		<Activity></Activity> 
+		<Activity></Activity>
 		<Category></Category>
+		<Recommend></Recommend>
 		<ShopList @emitEv='evDispatch'></ShopList>
     </div>
 </template>
@@ -14,6 +15,7 @@ import Locate from '@/views/main/take-away/main/locate/locate';
 import SearchAll from '@/views/main/take-away/main/search-all/search-all';
 import Activity from '@/views/main/take-away/main/activity/activity';
 import Category from '@/views/main/take-away/main/category/category';
+import Recommend from '@/views/main/take-away/main/recommend/index';
 import ShopList from '@/views/main/take-away/main/shop-list/shop-list';
 
 export default {
@@ -22,6 +24,7 @@ export default {
     	SearchAll,
 		Activity,
 		Category,
+		Recommend,
 		ShopList
     },
     data() {

@@ -3,7 +3,7 @@
         <div class='header' v-if='showBack'>
             <i href='javascript:void(0)' class='iconfont icon iconarrow-lift' @click='back'></i>
         </div>
-        <div class="content">
+        <div :class='["content",showBack ? "more":"normal"]'>
             <keep-alive>
                 <router-view/>
             </keep-alive>
@@ -67,8 +67,16 @@ export default {
     .content {
         overflow-y:auto;
         width: 100%;
-        //50px为上面back panel高度，50px为底部menu高度，15px为修正高度
-        height: calc(100% - 50px - 50px - 15px);
+    }
+
+    .more{
+        //60px为底部menu高度,50px为back高度
+        height: calc(100% - 60px - 50px);
+    }
+
+    .normal{
+        //60px为底部menu高度
+        height: calc(100% - 60px);
     }
 }
 

@@ -1,6 +1,6 @@
 <template>
     <div class="shop_list_wrapper">
-        <div class='recommend_shops'>推荐商家</div>
+        <div class='recommend_shops'>周边商家</div>
         <div class='filter'>
             <div class='l'></div>
             <div class='r'></div>

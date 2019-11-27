@@ -2,6 +2,7 @@ export const staticUrl = 'assets/img/activity/';
 export const categoryUrl = 'assets/img/category/';
 export const shopUrl = 'assets/img/shop/';
 export const foodUrl = 'assets/img/food/';
+export const recommendUrl = 'assets/img/recommend/';
 
 export const categoryList = [{
     title:'美食',
