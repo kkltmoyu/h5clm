@@ -4,7 +4,7 @@ export const hData = [{
     src: 'sanwenyushousi.webp'
 }, {
     id: 2,
-    name: '武圣羊杂汤套餐',
+    name: '羊杂汤套餐',
     src: 'wushengyangzage.webp'
 }, {
     id: 3,

@@ -31,13 +31,16 @@ export default {
 <style lang="scss" scoped>
 .hot_wrapper {
     overflow-x:auto;
-    display:flex;
-    padding:0 10px;
+    display:inline-flex;
+    padding:10px 10px;
+    white-space: nowrap;
+    max-width:100%;
+    box-sizing: border-box;
 
 	.item{
         display:flex;
         flex-direction: column;
-        width:100px;
+        min-width:100px;
         align-items: center;
 
         img{
@@ -51,9 +54,9 @@ export default {
         }
     }
 
-    .item:not(:first-child){
-        margin-left:20px;
-    }
+    // .item:not(:first-child){
+    //     margin-left:20px;
+    // }
 }
 
 </style>
