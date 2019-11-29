@@ -27,7 +27,10 @@
         <div class='comment_wrapper card'>
             <p>用餐体验满意度</p>
             <Stars :max="5" class='stars'></Stars>
-            <mt-field placeholder="请输入评价信息" type="textarea" rows="4" v-model="comment"></mt-field>
+            <div class='content'>
+                <i class='iconfont iconluyin'></i>
+                <mt-field placeholder="请输入评价信息" type="textarea" rows="4" v-model="comment"></mt-field>
+            </div>
         </div>
     </div>
 </template>
@@ -130,6 +133,17 @@ export default {
 
         .stars{
             margin:10px 0;
+        }
+
+        .content{
+            position: relative;
+            i{
+                font-size:0.25rem;
+                right: 15px;
+                position: absolute;
+                top: -25px;
+                cursor: pointer;
+            }
         }
     }
 }
